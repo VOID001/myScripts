@@ -103,11 +103,7 @@ case $1 in
         cleanup
         ;;
     "")
-        verb="Connect"
-        getconfig
-        curl ipgw.neu.edu.cn/ipgw/ipgw.ipgw --data "uid=$username&password=$password&operation=connect&range=2&timeout=1" > /tmp/.ipgwresult
-        showresult
-        cleanup
+        usage
         ;;
     *)
         usage;
